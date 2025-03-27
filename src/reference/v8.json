@@ -3592,6 +3592,21 @@
           }
         }
       },
+      "elevation": {
+        "doc": "Gets the elevation of a pixel (in meters above sea level). Can only be used in the `color-relief` property.",
+        "example": {
+          "syntax": {
+            "method": [],
+            "result": "number"
+          },
+          "value": ["elevation"]
+        },
+        "group": "Hillshade",
+        "sdk-support": {
+          "basic functionality": {
+          }
+        }
+      },
       "line-progress": {
         "doc": "Gets the progress along a gradient line. Can only be used in the `line-gradient` property.",
         "example": {
@@ -6546,6 +6561,24 @@
         ]
       },
       "property-type": "data-constant"
+    },
+    "color-relief": {
+      "type": "color",
+      "default": "#00000000",
+      "doc": "Defines the color of each pixel based on its elevation (in meters above sea level).  Should be an expression that uses `[\"elevation\"]` as input. The default is `#00000000`, which disables this feature.",
+      "transition": false,
+      "sdk-support": {
+        "basic functionality": {
+        },
+        "data-driven styling": {}
+      },
+      "expression": {
+        "interpolated": true,
+        "parameters": [
+          "elevation"
+        ]
+      },
+      "property-type": "color-ramp"
     }
   },
   "paint_background": {
